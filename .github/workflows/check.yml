@@ -1,0 +1,18 @@
+name: Check Starter Projects
+
+on:
+  push:
+    paths:
+      - 'samples/starter-projects/**'
+    branches:
+      - 'release-*'
+      - 'renovate/*'
+
+jobs:
+  konsist-starter-android-gradle-groovy-junit-4:
+    name: Konsist Starter Android Gradle Groovy Junit 4
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Publish Konsist Artifact To Local Maven Repository
+        run: echo DOne
