@@ -2,13 +2,12 @@ name: Check Starter Projects
 
 on:
     pull_request:
-      types: [ opened, synchronize ]  
+      types: [ opened, synchronize ]
+      branches:
+        - 'release-*'
     push:
       paths:
         - 'samples/starter-projects/**'
-      branches:
-        - 'release-*'
-        - 'renovate*'
 
 jobs:
   konsist-starter-android-gradle-groovy-junit-4:
